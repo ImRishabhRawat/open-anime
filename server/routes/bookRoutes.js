@@ -15,7 +15,8 @@ router.route("/").post(async (req, res) => {
 		console.log(req.body);
 		const result = await axios.get(process.env.API_URL, {
 			params: {
-				q: title,
+                q: title,
+                zoom:0,
 				api: process.env.BOOK_API_KEY,
 			},
         });
