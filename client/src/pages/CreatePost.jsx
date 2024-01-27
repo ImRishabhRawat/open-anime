@@ -26,7 +26,8 @@ const CreatePost = () => {
     if (form.title && form.photo) {
       setLoading(true);
       try {
-        const response = await fetch('https://open-book-9xyb.onrender.com/api/v1/post', {
+        // const response = await fetch('https://open-book-9xyb.onrender.com/api/v1/post', {
+        const response = await fetch('http://localhost:8080/api/v1/post', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -52,7 +53,8 @@ const CreatePost = () => {
       console.log(form.title);
       try {
         setGeneratingImg(true);
-        const response = await fetch('https://open-book-9xyb.onrender.com/api/v1/book', {
+        // const response = await fetch('https://open-book-9xyb.onrender.com/api/v1/book', {
+          const response = await fetch('http://localhost:8080/api/v1/book', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -83,31 +85,31 @@ const CreatePost = () => {
         <div>
         <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
         <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">
-         Join the community of readers and post the books you have enjoyed.</p>
+         Join the community of weebs and post the Anime you have enjoyed.</p>
       </div>
       <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-5">
+          <FormField
+           labelName="Name"
+           type="text"
+           name="author"
+           placeholder="Your Name... "
+           value={form.author}
+           handleChange={handleChange}
+         />
         <FormField
-            labelName="Book Title"
+            labelName="Anime Title"
             type="text"
             name="title"
             placeholder="Ex., Solo Leveling "
             value={form.title}
             handleChange={handleChange}
           />
-           <FormField
-            labelName="Author"
-            type="text"
-            name="author"
-            placeholder="Ex., Chugong "
-            value={form.author}
-            handleChange={handleChange}
-          />
           <FormField
-            labelName="Note"
+            labelName="What you liked in this anime?"
             type="text"
             name="note"
-            placeholder="  The series is about Sung Jinwoo, a weak hunter who gains the ability to level up and become stronger."
+            placeholder=" The series is about Sung Jinwoo, a weak hunter who gains the ability to level up and become stronger."
             value={form.note}
             handleChange={handleChange}
           />
@@ -142,7 +144,7 @@ const CreatePost = () => {
           </button>
         </div>
         <div className="mt-10">
-          <p className="mt-2 text-[#666e75] text-[14px]">** Once you have added the book you want, you can share it with others in the community **</p>
+          <p className="mt-2 text-[#666e75] text-[14px]">** Once you have added the anime you want, you can share it with others in the community **</p>
           <button
             type="submit"
             className="mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"

@@ -26,7 +26,8 @@ const Home = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('https://open-book-9xyb.onrender.com/api/v1/post', {
+      // const response = await fetch('https://open-book-9xyb.onrender.com/api/v1/post', {
+      const response = await fetch('http://localhost:8080/api/v1/post', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -63,7 +64,7 @@ const Home = () => {
       <div>
         <h1 className="font-extrabold text-[#222328] text-[32px]">The Community Showcase</h1>
         <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">
-          Discover books from different genres and cultures, recommended by readers worldwide. Find your next favorite book among them.</p>
+          Discover Anime from different genres and cultures, recommended by weebs worldwide. Find your next favorite Anime among them.</p>
       </div>
 
       <div className="mt-16">
