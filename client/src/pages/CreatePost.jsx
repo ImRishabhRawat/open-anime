@@ -106,7 +106,7 @@ const CreatePost = () => {
             handleChange={handleChange}
           />
           <FormField
-            labelName="What you liked in this anime?"
+            labelName="Describe what you find appealing in this anime."
             type="text"
             name="note"
             placeholder=" The series is about Sung Jinwoo, a weak hunter who gains the ability to level up and become stronger."
