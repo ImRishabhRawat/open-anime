@@ -9,7 +9,7 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   return (
     <BrowserRouter>
-      <header className="w-full flex justify-between items-center bg-white sm:px-8 px-4 border-b border-b-[#e6ebf4]">
+      <header className="w-full flex justify-between items-center bg-white sm:px-8 px-4 border-b border-b-[#e6ebf4] mt-2 pb-2">
         <Link to="/">
           {/* <img src={logo} alt="OpenBook" className='w-28 object-contain' /> */}
           <h1 className="font-logo font-bold text-4xl">OpenAnime</h1>
